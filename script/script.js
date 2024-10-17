@@ -8,15 +8,15 @@
 const allowedEmail = ['filippo@gmail.com', 'marco@gmail.com','carlo@gmail.com','alberto@gmail.com','luca@gmail.com',]  // array
 
 // creo una variabile, con un Prompt chiedo all'utente la sua email e lo salvo nella variabile
-const userEmail = prompt('Inserisci la tua mail')
-console.log(userEmail)   // string
+const mailUtente = prompt('Inserisci la tua mail')
+console.log(mailUtente)   // string
 
 // creo una variabile vuota che mi darà il messaggio nelle varie e successive casistiche
 let message = ''
 
 // SE allowedEmail include userEmail, message = può accedere
 // ALTRIMENTI message = non può accedere
-if (allowedEmail.includes(userEmail)) {
+if (allowedEmail.includes(mailUtente)) {
     message = 'Può effettuare l\'accesso!'
 } else {
     message = 'Spiacenti, non può effetturare l\'accesso'
