@@ -38,13 +38,16 @@ let allowedAccess = false // Boolean
 // Ciclo for per controllare se l'email dell'utente è nella lista delle email autorizzate
 for (let i = 0; i < emailList.length; i++) {    // se 0 è più piccolo della lunghezza dell'array (true) esegue il ciclo
     if (userEmail === emailList[i]) {           // SE la userMail è esattamente uguale a una della mail di qualsiasi indice dell'array
-        console.log('Può effettuare l\'accesso!')
         allowedAccess = true;  // Boolean    messo a true per fargli trovare una possibile corrispondenza
     }
 }
-// SE dopo il ciclo allowedAcces è ancora false, nessuna corrispondenza è stata trovata, stampa il messaggio di accesso negato
-if (!allowedAccess) {
-    console.log('Spiacenti, non può effettuare l\'accesso')
+// Controllo finale al di fuori del ciclo
+// SE dopo il ciclo allowedAcces è True stampa il messaggio di accesso consentito,
+// ALTRIMENTI stampa il messaggio di accesso negato
+if (allowedAccess) {
+    console.log('Può effettuare l\'accesso!')
+} else {
+    console.log('Spiacenti, non può effettuare l\'accesso!')
 }
 
 
